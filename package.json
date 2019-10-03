@@ -1,6 +1,6 @@
 {
   "name": "finger-unlocker",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "It`s an finger-unlocker for web project ",
   "main": "index.js",
   "scripts": {
