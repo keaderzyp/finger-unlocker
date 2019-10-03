@@ -1,2 +1,2 @@
-module.exports = require('./lib/finger-unlocker.js');
-exports.default = require('./lib/finger-unlocker.js');
+module.exports = require('./src/FingerUnlocker.js');
+exports.default = require('./src/FingerUnlocker.js');
