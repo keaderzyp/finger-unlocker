@@ -1,8 +1,8 @@
-import {Base64} from 'js-base64';
-import MD5 from 'md5';
-import SHA1 from 'sha1';
-import Point from './Point.js';
-export default class FingerUnlocker{
+const Base64 = require('js-base64').Base64;
+const MD5 = require('md5');
+const SHA1 = require('sha1');
+const Point = require('./Point.js');
+class FingerUnlocker{
 	constructor(args) {
 		this.initData(args);
 		this.initCanvas(this.el,args.callback);
@@ -278,4 +278,5 @@ export default class FingerUnlocker{
 		}
 	}
 }
+module.exports = FingerUnlocker;
 window.FingerUnlocker = FingerUnlocker;

@@ -1,4 +1,4 @@
-export default class Point{
+class Point{
 	constructor(base,index) {
 		this.initData(base,index)
 		this.base = base;
@@ -63,3 +63,4 @@ export default class Point{
 		this.base.render();
 	}
 }
+module.exports = Point;
