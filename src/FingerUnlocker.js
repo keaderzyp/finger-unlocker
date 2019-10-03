@@ -279,4 +279,4 @@ class FingerUnlocker{
 	}
 }
 module.exports = FingerUnlocker;
-window.FingerUnlocker = FingerUnlocker;
+global.FingerUnlocker = FingerUnlocker;
