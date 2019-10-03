@@ -214,7 +214,7 @@ export default class FingerUnlocker{
 		if(this.isMouseDown){
 			this.computedMouseXY(e.layerX||e.offsetX,e.layerY||e.offsetY);
 			this.checkPoint();
-			console.log(this.mouseX,this.mouseY)
+			// console.log(this.mouseX,this.mouseY)
 		}
 	}
 	mouseUp(e){
