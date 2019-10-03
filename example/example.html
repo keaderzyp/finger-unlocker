@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>FingerUnlocker</title>
+	</head>
+	<body>
+		<div id="app">
+			
+		</div>
+		<script src="../lib/finger-unlocker.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			let f = new FingerUnlocker({
+				el:document.querySelector("#app"),
+				options:{
+					width:600,
+					height:600,
+					lineWidth:20,
+					lineColor:'#3370CC',
+					passwordType:'none',
+				},
+				point:{
+					count:3,
+					r:50,
+					backgoundColor:'#22DDDD',
+					globalAlpha:1,
+					shadow:false,
+					shadowColor:'#22DDDD',
+					borderColor:'#3370CC',
+					border:true,
+					centerPointR:25,
+					centerPointColor:'#3370CC',
+				},
+				styles:{
+					backgroundColor:'rgba(0,0,0,0)',
+					width:'100%',
+				},	
+				callback:{
+					touchEnd(res){
+						console.log(res.password)
+					},
+					mouseUp(res){
+						console.log(res.password)
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
