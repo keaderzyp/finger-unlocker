@@ -202,8 +202,10 @@ class FingerUnlocker{
 		}
 	}
 	computedMouseXY(x,y){
-		this.mouseX = Math.round(x/this.canvas.offsetWidth*this.canvas.width*1000)/1000;
-		this.mouseY = Math.round(y/this.canvas.offsetHeight*this.canvas.height*1000)/1000;
+		
+		
+		this.mouseX = Math.round(x/this.canvas.offsetWidth*this.canvas.width);
+		this.mouseY = Math.round(y/this.canvas.offsetHeight*this.canvas.height);
 	}
 	mouseDown(e){
 		this.computedMouseXY(e.layerX|e.offsetX,e.layerY|e.offsetY);
@@ -229,11 +231,13 @@ class FingerUnlocker{
 	}
 	
 	touchStart(e){
-		this.computedCanvasPositionAndFixTouchPosition(e.targetTouches[0].pageX,e.targetTouches[0].pageY);
+		e.stopPropagation();
+		e.preventDefault();
+		this.computedCanvasPositionAndFixTouchPosition(e.touches[0].pageX,e.touches[0].pageY);
 		this.checkPoint();
 	}
 	touchMove(e){
-		this.computedCanvasPositionAndFixTouchPosition(e.targetTouches[0].pageX,e.targetTouches[0].pageY);
+		this.computedCanvasPositionAndFixTouchPosition(e.touches[0].pageX,e.touches[0].pageY);
 		this.checkPoint();
 	}
 	touchEnd(e){
