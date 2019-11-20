@@ -4,7 +4,7 @@
 > 引入介绍（Introduction）
 
 finger-unlocker是一款可自由定制样式的手势解锁组件，支持web端移动端使用。
-通过npm安装步骤如下：
+通过npm安装步骤如下
 
 ```javascript
 npm i finger-unlocker
